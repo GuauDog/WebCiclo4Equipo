@@ -1,0 +1,14 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
+            <div *ngIf="activeSession">
+                <li><a routerLink="/admin/get">Administrador</a></li>
+                <li><a routerLink="/aeropuerto/get">Aeropuerto</a></li>
+                <li><a routerLink="/seguridad/logout">Cerrar Sesion</a></li>
+            </div>
+
+        </ul>
+    </div>
+</nav>
