@@ -1,12 +1,20 @@
 <nav>
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
+    <div class="nav-wrapper teal darken-3">
+        <a href="#" class="brand-logo">
+            Logo
+        </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
             <div *ngIf="activeSession">
-                <li><a routerLink="/admin/get">Administrador</a></li>
-                <li><a routerLink="/aeropuerto/get">Aeropuerto</a></li>
+                <li><a routerLink="/admin/get">Usuarios</a></li>
+                <li><a routerLink="/aeropuertos/get">Aeropuertos</a></li>
+                <li><a routerLink="/vuelos/get">Vuelos</a></li>
+                <li><a routerLink="/rutas/get">Rutas</a></li>
                 <li><a routerLink="/seguridad/logout">Cerrar Sesion</a></li>
+            </div>
+
+            <div *ngIf="!activeSession">
+                <li><a routerLink="/seguridad/login">Login</a></li>
+                <li><a routerLink="/admin/create">Registrarse</a></li>
             </div>
 
         </ul>

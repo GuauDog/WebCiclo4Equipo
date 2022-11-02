@@ -25,6 +25,14 @@ const routes: Routes = [
     loadChildren: () => import('./modulos/aeropuertos/aeropuertos.module').then(m => m.AeropuertosModule)
   },
   {
+    path: 'vuelos',
+    loadChildren: () => import('./modulos/vuelos/vuelos.module').then(m => m.VuelosModule)
+  },
+  {
+    path: 'rutas',
+    loadChildren: () => import('./modulos/rutas/rutas.module').then(m => m.RutasModule)
+  },
+  {
     path: 'error',
     component: ErrorComponent,
   },
