@@ -4,7 +4,7 @@ export class VuelosModelo {
     horaInicio?: string;
     fechaFin?: string;
     horaFin?: string;
-    asientosVendidos?: number;
+    asientosVendidos?: string;
     nombrePiloto?: string;
     ruta?: string;
 }

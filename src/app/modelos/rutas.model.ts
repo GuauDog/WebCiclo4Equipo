@@ -1,6 +1,6 @@
 export class RutasModelo {
-    id?: String;
-    tiempoEstimado?: Number;
+    id?: string;
+    tiempoEstimado?: string;
     origen?: string;
     destino?: string;
 }

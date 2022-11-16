@@ -19,7 +19,9 @@ export class RutasService {
 
   store(ruta: RutasModelo): Observable<RutasModelo> {
     return this.http.post<RutasModelo>(environment.servicios.rutas, {
-      id: ruta.id,
+      origen: ruta.origen,
+      destino: ruta.destino,
+      tiempoEstimado: ruta.tiempoEstimado,
     });
   }
 
@@ -33,7 +35,9 @@ export class RutasService {
 
   update(ruta: RutasModelo): Observable<RutasModelo> {
     return this.http.patch<RutasModelo>(`${environment.servicios.rutas}${ruta.id}`, {
-      id: ruta.id,
+      origen: ruta.origen,
+      destino: ruta.destino,
+      tiempoEstimado: ruta.tiempoEstimado,
     }, {
       headers: new HttpHeaders({
         "Authorization": `Bearer ${this.token}`
