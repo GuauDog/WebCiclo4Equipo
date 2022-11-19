@@ -6,7 +6,7 @@
                 <select class="browser-default" formControlName="ruta">
                     <option value="" disabled selected>Seleccione el origen</option>
                     <option *ngFor="let i of listadoRutas" value="{{i.id}}">
-                        {{i.id}}
+                        {{i.origen}}-{{i.destino}}
                     </option>
                 </select>
             </div>

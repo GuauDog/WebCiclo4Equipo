@@ -1,3 +1,7 @@
-nav{
+nav {
     margin-bottom: 20px;
+}
+
+.nav-wrapper {
+    padding: 0 100px;
 }
