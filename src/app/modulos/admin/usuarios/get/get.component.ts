@@ -18,12 +18,10 @@ export class GetComponent implements OnInit {
   getAll() {
     this.usuarioService.getAll().subscribe((data: UsuarioModelo[]) => {
       this.listado = data
-      console.log(data)
     })
   }
 
   delete(id?: any) {
-    console.log(id)
     Swal.fire({
       title: '¿Esta seguro de eliminar este registro?',
       showCancelButton: true,

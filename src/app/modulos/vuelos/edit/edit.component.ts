@@ -43,7 +43,6 @@ export class EditComponent implements OnInit {
   }
   buscarRegistro(id: string) {
     this.vuelosService.getWithId(id).subscribe((data: any) => {
-      console.log(data)
       this.fgValidacion.controls["id"].setValue(id);
       this.fgValidacion.controls["nombrePiloto"].setValue(data.nombrePiloto);
       this.fgValidacion.controls["fechaInicio"].setValue(data.fechaInicio);
@@ -62,7 +61,6 @@ export class EditComponent implements OnInit {
   getAllRutas(){
     this.rutasService.getAll().subscribe((data: RutasModelo[]) => {
       this.listadoRutas = data
-      // console.log(data)
     })
   }
 

@@ -39,7 +39,6 @@ export class EditComponent implements OnInit {
 
   buscarRegistro(id: string) {
     this.aeropuertoService.getWithId(id).subscribe((data: any) => {
-      console.log(data)
       this.fgValidacion.controls["id"].setValue(id);
       this.fgValidacion.controls["nombre"].setValue(data.nombre);
       this.fgValidacion.controls["ciudad"].setValue(data.ciudad);

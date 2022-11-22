@@ -40,7 +40,6 @@ export class EditComponent implements OnInit {
 
   buscarRegistro(id: string) {
     this.rutasService.getWithId(id).subscribe((data: any) => {
-      console.log(data)
       this.fgValidacion.controls["id"].setValue(id);
       this.fgValidacion.controls["origen"].setValue(data.origen);
       this.fgValidacion.controls["destino"].setValue(data.destino);
@@ -52,7 +51,6 @@ export class EditComponent implements OnInit {
   getAllAeropuertos(){
     this.aeropuertoService.getAll().subscribe((data: AeropuertosModelo[]) => {
       this.listadoAeropuertos = data
-      // console.log(data)
     })
   }
 
@@ -62,7 +60,6 @@ export class EditComponent implements OnInit {
     ruta.origen = this.fgValidacion.controls["origen"].value + "";
     ruta.destino = this.fgValidacion.controls["destino"].value + "";
     ruta.tiempoEstimado = this.fgValidacion.controls["tiempoEstimado"].value + "";
-    console.log(ruta);
     
     this.rutasService.update(ruta).subscribe((data: RutasModelo) => {
       Swal.fire('Editado correctamente!', '', 'success')

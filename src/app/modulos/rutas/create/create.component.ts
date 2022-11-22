@@ -35,7 +35,6 @@ export class CreateComponent implements OnInit {
   getAllAeropuertos(){
     this.aeropuertoService.getAll().subscribe((data: AeropuertosModelo[]) => {
       this.listadoAeropuertos = data
-      // console.log(data)
     })
   }
 

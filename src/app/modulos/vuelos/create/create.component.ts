@@ -41,7 +41,6 @@ export class CreateComponent implements OnInit {
   getAllRutas(){
     this.rutasService.getAll().subscribe((data: RutasModelo[]) => {
       this.listadoRutas = data
-      // console.log(data)
     })
   }
 

@@ -42,7 +42,6 @@ export class CreateComponent implements OnInit {
     aeropuerto.coordY = this.fgValidacion.controls["coordY"].value + "";
     aeropuerto.siglas = this.fgValidacion.controls["siglas"].value + "";
     aeropuerto.tipo = this.fgValidacion.controls["tipo"].value + "";
-    console.log(aeropuerto);
 
     this.aeropuertoService.store(aeropuerto).subscribe((data: AeropuertosModelo) => {
       Swal.fire('Creado correctamente!', '', 'success')
